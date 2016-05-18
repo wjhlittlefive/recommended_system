@@ -10,7 +10,8 @@ import requests
 import json
 
 def get_sha256sum(request_url, post_url=None):
-    payload = {'url': "https://upload.wikimedia.org/wikipedia/commons/8/85/Garden_bench_001.jpg"}
+    #payload = {'url': "https://upload.wikimedia.org/wikipedia/commons/8/85/Garden_bench_001.jpg"}
+    payload = {'url': "https://pic4.zhimg.com/edff7d48e6d7a6ce2ff56c531b0ec817_s.jpg"}
     try:
         response = requests.post(url=request_url, data=json.dumps(payload), headers={'Content-Type': 'application/json'}, timeout=5)
         if response.status_code == 200:

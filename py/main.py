@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 '''
-基于评论者的推荐
+基于用户的推荐
+基于物品的推荐
 数据来源：http://grouplens.org/datasets/movielens/
 参考资料：集体智慧编程
 '''
@@ -25,7 +26,6 @@ def read_item(file):
         for item in f:
             movie_item = dict()
             tmp = item.rstrip('\n').split('|')
-            movie_item['id'] = tmp[0]
             movie_item['title'] = tmp[1]
             movie_item['release_date'] = tmp[2]
             movie_item['video_release_date'] = tmp[3]
@@ -87,9 +87,23 @@ def euclidean_distance(prefs, person1, person2):
             for item in si.keys()])
     return 1/(1+math.sqrt(distance))
 
-def getRecommendations(prefs, person, similarity=euclidean_distance):
+def calculateSimilarItems(prefs, n=10):
     '''
-    推荐物品
+    计算物品相关度
+    返回字典
+    '''
+    result = dict()
+    itemPrefs = transformPrefs(prefs)
+    c = 0
+    fpr item in itemPrefs:
+        c += 1
+        score = topMatches(itemPrefs, item, n=n, similarity=euclidean_distance)
+        result[item] = scores
+    return result
+
+def getRecommendedUsers(prefs, person, similarity=euclidean_distance):
+    '''
+    基于用户推荐物品
     '''
     totals = dict()
     simSums = dict()
@@ -113,13 +127,33 @@ def getRecommendations(prefs, person, similarity=euclidean_distance):
     rankings.reverse()
     return rankings
 
+def getRecommendedItems(prefs, itemMatch, user):
+    userRatings = prefs[user]
+    scores = dict()
+    totalSim = dict()
+    for item, rating in userRatings.items():
+        # 遍历循环与当前物品相近的物品
+        if item2 in userRatings:
+            continue # 若用户对当前物品做过评价，忽略
+        scores.setdefault(item2, 0)
+        scores[item2] += similarity * rating
+        totalSim.setdefault(item2, 0)
+        totalSim[item2] += similarity
+
+    rankings = [(score/totalSim[item], item) for item, score in scores.items()]
+
+    rankings.sort()
+    rankings.reverse()
+    return rankings
+
+
 if __name__ == "__main__":
     items = read_item('u.item')
     while True:
         prefs = read_data("u.data")
         person = input("input the id.\n")
         if re.match(r"[0-9]+", person):
-            rankings = getRecommendations(prefs, person)
+            rankings = getRecommendedUsers(prefs, person)
             for i in range(20):
                 print("id:{} title:{}".format(rankings[i][1], items[rankings[i][1]]['title']))
         else:

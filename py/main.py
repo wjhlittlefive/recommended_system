@@ -26,6 +26,7 @@ def read_item(file):
         for item in f:
             movie_item = dict()
             tmp = item.rstrip('\n').split('|')
+            movie_item['id'] = tmp[0]
             movie_item['title'] = tmp[1]
             movie_item['release_date'] = tmp[2]
             movie_item['video_release_date'] = tmp[3]
@@ -95,7 +96,7 @@ def calculateSimilarItems(prefs, n=10):
     result = dict()
     itemPrefs = transformPrefs(prefs)
     c = 0
-    fpr item in itemPrefs:
+    for item in itemPrefs:
         c += 1
         score = topMatches(itemPrefs, item, n=n, similarity=euclidean_distance)
         result[item] = scores

@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+'''
+相似度计算
+'''
 
 try:
     import itertools

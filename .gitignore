@@ -1,2 +1,4 @@
 Makefile
 data
+*.pyc
+*.__pycache__

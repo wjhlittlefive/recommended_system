@@ -25,12 +25,32 @@ pass
 
 相似度的计算是基于向量的。计算两个向量的距离，距离越近相似度越大。
 
+相似度：
+
+* 将一个用户对所有物品的偏好作为一个向量
+* 所有用户对某个物品的偏好
+
+计算方法：
+
 * 欧几里德距离
 * 皮尔逊相关系数
+* Cosine 相似度
+* Tanimoto 系数
+
+#### 相似邻居的计算
+
+固定数量的邻居：
+
+* K-neighborhoods
+* Fix-size neighborhoods
+
+基于相似度门槛的邻居
+
+* Threshold-based neightborhoods
 # 参考资料
 
 [探索推荐引擎内部的秘密，第 2 部分: 深入推荐引擎相关算法 - 协同过滤](https://www.ibm.com/developerworks/cn/web/1103_zhaoct_recommstudy2/)
-
+[推荐算法]基于用户的协同过滤算法](http://blog.csdn.net/ygrx/article/details/15501679)
 ## socket5 proxy
 
 ip: 10.170.4.60 port:1080

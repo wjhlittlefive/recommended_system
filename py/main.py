@@ -3,6 +3,8 @@
 
 '''
 基于评论者的推荐
+数据来源：http://grouplens.org/datasets/movielens/
+参考资料：集体智慧编程
 '''
 
 import math

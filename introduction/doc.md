@@ -25,6 +25,7 @@ pass
 
 相似度的计算是基于向量的。计算两个向量的距离，距离越近相似度越大。
 
+<<<<<<< HEAD
 相似度：
 
 * 将一个用户对所有物品的偏好作为一个向量
@@ -43,6 +44,11 @@ pass
 
 * K-neighborhoods
 * Fix-size neighborhoods
+=======
+* [欧几里得距离](http://baike.baidu.com/link?url=olt1___-dlFEOpdRbGWYtWHxmEtnZ7TsAMNSY1u_NxpQSVruAVAl8dZ2stwWyJ_qLX48CES7ChMxX9b3If7Sk3Xu5g6F04hBoXPb10BLIcP8bJcABt2cEivD4YNJDh3JZlggo3CtU-QtWYqdbfNWq66BSoeW4hpGAHO_WosZG4U2mmcmlaVhAb2u-ZTiGfDZKYWLJ184jDxhwWnAzy7x9K)
+
+* [皮尔逊相关系数](http://baike.baidu.com/link?url=xnMeqHNBQfd4_zDJKy6CwaUlMfb7txvA3EbS99QlYvQGL1EmmqcW6Edtx1qsP3JDXsxnVyr1X3hOG-IUdHhBh_)
+>>>>>>> refs/remotes/origin/master
 
 基于相似度门槛的邻居
 

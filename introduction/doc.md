@@ -47,9 +47,16 @@ pass
 基于相似度门槛的邻居
 
 * Threshold-based neightborhoods
+
+## 计算推荐
+
+#### 基于用户的CF
+
+基于用户对物品的偏好找到相邻邻居用户，然后将相邻用户喜欢的推荐给当前用户。
+
 # 参考资料
 
-[探索推荐引擎内部的秘密，第 2 部分: 深入推荐引擎相关算法 - 协同过滤](https://www.ibm.com/developerworks/cn/web/1103_zhaoct_recommstudy2/)
+[探索推荐引擎内部的秘密，第 2 部分: 深入推荐引擎相关算法 - 协同过滤](https://www.ibm.com/developerworks/cn/web/1103_zhaoct_recommstudy2/)  
 [推荐算法]基于用户的协同过滤算法](http://blog.csdn.net/ygrx/article/details/15501679)
 ## socket5 proxy
 

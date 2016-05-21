@@ -26,6 +26,7 @@ pass
 相似度的计算是基于向量的。计算两个向量的距离，距离越近相似度越大。
 
 * [欧几里得距离](http://baike.baidu.com/link?url=olt1___-dlFEOpdRbGWYtWHxmEtnZ7TsAMNSY1u_NxpQSVruAVAl8dZ2stwWyJ_qLX48CES7ChMxX9b3If7Sk3Xu5g6F04hBoXPb10BLIcP8bJcABt2cEivD4YNJDh3JZlggo3CtU-QtWYqdbfNWq66BSoeW4hpGAHO_WosZG4U2mmcmlaVhAb2u-ZTiGfDZKYWLJ184jDxhwWnAzy7x9K)
+
 *[皮尔逊相关系数](http://baike.baidu.com/link?url=xnMeqHNBQfd4_zDJKy6CwaUlMfb7txvA3EbS99QlYvQGL1EmmqcW6Edtx1qsP3JDXsxnVyr1X3hOG-IUdHhBh_)
 
 [探索推荐引擎内部的秘密，第 2 部分: 深入推荐引擎相关算法 - 协同过滤](https://www.ibm.com/developerworks/cn/web/1103_zhaoct_recommstudy2/)
